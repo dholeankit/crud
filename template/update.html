@@ -1,0 +1,12 @@
+<h1>Form</h1>
+<form action= "{% url 'updateEmploye' empobj.id %}" method="post">
+    {% csrf_token %}
+    <input type="text" placeholder="first_name" value="{{empobj.first_name}}" name="f_name"><br><br>
+    <input type="text" placeholder="last_name" value="{{empobj.last_name}}" name="l_name"><br><br>
+    <input type="number" placeholder="salary" value="{{empobj.salary}}" name="salary"><br><br>
+    <textarea name="description" id="">{{empobj.description}}</textarea><br><br>
+
+ 
+    
+    <input type="submit" placeholder="submit">
+</form>
